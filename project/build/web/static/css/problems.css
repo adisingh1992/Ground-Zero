@@ -1,0 +1,45 @@
+#comp{
+        padding: 2%;
+        font-family: serif;
+        font-size: 1.3em;
+        color: #424242;
+}
+
+#comp h3{
+        font-family: courier new;
+        padding: 1%;
+        font-weight: bold;
+        border: 1px solid #A4A4A4;
+        border-radius: 5px;
+        background-color: #F2F2F2;
+        box-shadow: -2px 2px 20px grey;
+        margin-bottom: 2.5%;
+        width: 72%;
+}
+
+#comp textarea{
+        margin-left: 1%;
+        border-radius: 5px;
+        width: 70%;
+        height: 50%;
+        resize: none;
+        border-left: 5px solid teal;
+        overflow: hidden;
+}
+
+#comp1{
+        width: 50%;
+        font-size: 1em;
+        margin: 1%;
+}
+
+.ps1{
+        border-radius: 5px;
+        padding: .5%;
+        box-shadow: 5px 2px 20px grey;       
+        background: linear-gradient(to bottom right, grey, teal); 
+}
+
+.ps1:hover{
+        box-shadow: 5px 5px 20px grey;
+}
