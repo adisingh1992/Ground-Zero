@@ -1,3 +1,8 @@
+@font-face{
+    font-family: chiller;
+    src: url(chiller.ttf) format("truetype");
+}
+
 .float{
     position: fixed;
     right: 0;
