@@ -4,19 +4,18 @@
 }
 
 .float{
-    position: fixed;
-    right: 0;
-    bottom: 10%;
-    height: 117px;
-    width: 30px;
-    cursor: pointer;
-    border-radius: 5px;
-    border: 1px groove #e2e2e2;
-    box-shadow: 2px 2px 20px #e2e2e2;
+  height: 151px;
+  width: 59px;
+  position: fixed;
+  bottom: 0;
+  right: 50;
+  cursor: pointer;
+  opacity: .8;
+  transition: .3s linear
 }
 
 .float:hover{
-    box-shadow: 1px 1px 50px #e2e2e2;    
+    box-shadow: 1px 1px 10px #fff;
 }
 
 h2{
@@ -61,13 +60,13 @@ p{
 	margin-top: 2%;
 }
 
-@keyframes blinker {  
+@keyframes blinker {
 	0% { opacity: 1.0; }
 	50% { opacity: 0.0; }
 	100% { opacity: 1.0; }
 }
 
-@keyframes blink1 {  
+@keyframes blink1 {
 	0% { color: teal; }
 	50% { color: #ff0000; }
 	100% { color: teal; }
