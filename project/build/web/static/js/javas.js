@@ -41,3 +41,27 @@ function show_hide3(){
     document.getElementById("inter").style.display = "none";
     document.getElementById("expert").style.display = "block";
 }
+
+function forgot(){
+    var user = prompt("Enter Your UserName");
+    var email = prompt("Enter Your Email To Verify");
+		var pass = prompt("Enter New Password");
+		var cpass = prompt("Confirm New Password");
+		if(pass === cpass){
+				forgot_process(user, email, pass);
+		}
+		else {
+				alert("Passwords Do Not Match..!!");
+		}
+}
+
+function forgot_process(user, email, pass){
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+				if(xhttp.readyState === 4 && xhttp.status === 200){
+						alert(xhttp.responseText);
+				}
+		};
+		xhttp.open("GET", "forgot.jsp?uname="+user+"&email="+email+"&pass="+pass, true);
+		xhttp.send();
+}
