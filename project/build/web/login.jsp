@@ -5,7 +5,7 @@
         {
         response.sendRedirect("categ.jsp");
     }
-    else 
+    else
        {
 %>
 	<div class="gz-container gz-padding gz-card-8" id="log_form">
@@ -19,7 +19,7 @@
 			<label class="gz-label">Password</label>
 		</div>
 			<button type="submit" class="gz-btn gz-teal">SUBMIT</button>
-			<br/><br/><a href="register.jsp" class="gz-animate-opacity">NOT A MEMBER? Sign-Up Now..!!</a>
+			<br/><p onclick="forgot()" style="color: red; font-size: 1.12em;">FORGOT YOUR PASSWORD? Reset It Now..!!</p>
 	</form>
 	</div>
 <%
