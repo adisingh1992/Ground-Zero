@@ -21,6 +21,13 @@
         Statement st=ConnectionProvider.getCon().createStatement();
         ResultSet rs;
         rs=st.executeQuery("Select "+type+" from competition where id="+count+"");
+		String type_hash = "";
+		if(type.equals("easy"))
+			type_hash = "48bb6e862e54f2a795ffc4e541caed4d";
+		else if(type.equals("intermediate"))
+			type_hash = "438fa616dea43dbb0a42b0ce2d393e7a";
+		else if(type.equals("expert"))
+			type_hash = "b9b83bad6bd2b4f7c40109304cf580e1";
 %>
         <div id="comp">
             <h3>PROBLEM STATEMENT :: <%=count %></h3>
@@ -40,11 +47,10 @@
                         out.print("<script>location.href='categ.jsp';</script>");
                     }
                 %>
-                <br/><br/>
             </div>
             <form method="POST" action="comp_process.jsp" class="c_form">
                 <textarea name="code" spellcheck="false"></textarea>
-                <input type="hidden" value="48bb6e862e54f2a795ffc4e541caed4d" name="cvalue"/>
+                <input type="hidden" value="<%=type_hash %>" name="cvalue"/>
                 <input type="hidden" value="<%=count %>" name="id"/>
                 <input type="hidden" value="<%=myname %>" name="uname"/>
                 <br/><br/>
