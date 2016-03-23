@@ -7,11 +7,11 @@
     Integer points = Integer.parseInt(request.getParameter("points"));
     String query = "";
     if(type.equals("easy"))
-        query = "UPDATE EASY_RESULT SET points="+points+" WHERE id="+id+";";
+        query = "UPDATE EASY_RESULT SET points="+points+" WHERE id="+id+" and uname='"+user+"';";
     else if(type.equals("intermediate"))
-            query = "UPDATE INTERMEDIATE_RESULT SET points="+points+" WHERE id="+id+";";
+            query = "UPDATE INTERMEDIATE_RESULT SET points="+points+" WHERE id="+id+" and uname='"+user+"';";
     else if(type.equals("expert"))
-            query = "UPDATE EXPERT_RESULT SET points="+points+" WHERE id="+id+";";
+            query = "UPDATE EXPERT_RESULT SET points="+points+" WHERE id="+id+" and uname='"+user+"';";
     PreparedStatement ps = ConnectionProvider.getCon().prepareStatement(query);
     int x = 0;
     x  = ps.executeUpdate();
